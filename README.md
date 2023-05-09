@@ -1597,7 +1597,7 @@ Using Feign, developers can define an interface that describes the HTTP API of a
 
 ### Steps to use the feign client :[This is called a declarative approach]
 
-- Add the feign client dependency in ****************`pom.xml`**
+- Add the feign client dependency in **`pom.xml`**
     
     ```xml
     <dependency>
@@ -1606,7 +1606,7 @@ Using Feign, developers can define an interface that describes the HTTP API of a
     </dependency>
     ```
     
-- Then add the annotation ************************************************`@EnableFeignClients` to the runner class
+- Then add the annotation `@EnableFeignClients` to the runner class
 - Then a  `HotelService` interface in package `com.spring.micro.service.external.feignsevices`  and add the following method
     
     ```java
