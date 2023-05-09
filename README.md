@@ -1864,8 +1864,7 @@ spring.cloud.gateway.routes[2].predicates[0]=Path=/ratings/**
 
 </aside>
 
-********************************************************But now there is one Issue :********************************************************
-
+**But now there is one Issue :**
 If we have a `StaffController` in Hotel Service in the controller package the we are able to access the staff controller methods by using the url path but that is not possible when we do it with the API-GATEWAY 
 
 To resolve this we need to add the path `/staffs/**` in predicate for that specific service in which that controller is present
@@ -1899,10 +1898,9 @@ spring.cloud.gateway.routes[2].predicates[0]=Path=/ratings/**
 ### What is config server?
 
 In a microservices architecture, the Config Server in Spring Boot is a centralized configuration service that manages external configurations for distributed applications across all environments. It is a dedicated server that stores configurations in one or more Git repositories, and microservices applications can access it to obtain their specific configurations. The Config Server is designed to simplify the management of configurations for multiple instances of microservices in a distributed environment, and it allows applications to dynamically fetch new configurations as they become available, without the need to redeploy or restart the application.
-
 We don’t have to repeat the configurations in every service in our local machine
 
-************************************************************To use config server we need to create a new Spring boot starter project :************************************************************
+**To use config server we need to create a new Spring boot starter project :**
 
 Create a new starter project and the  `Config Server`& `Eureka Discovery Client` dependencies in the `pom.xml` or add them while creating the project
 
