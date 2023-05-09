@@ -2197,7 +2197,7 @@ The CircuitBreaker uses a sliding window to store and aggregate the outcome of c
         
     - Then perform an HTTP call to get the users here where in the USER-SERVICE is dependent on RATING-SERVICE
     - Then whenever the RATING-SERVICE is down it will give the dummy value we have set in fallback function above for that particular request just as below returned JSON shows
-        - 
+       
         
         ![Screenshot from 2023-05-02 15-13-53.png](%F0%9F%94%A5%20Micro-services%20Tutorial%20using%20Spring%20Boot%20in%20One%208fd3b97c33c24f918fb3c041329f2426/Screenshot_from_2023-05-02_15-13-53.png)
         
@@ -2329,7 +2329,6 @@ First we need to add the `OKTA` ,`Spring security` dependencies in `pom.xml`
     - Refer this [[https://dev-47078417-admin.okta.com/admin/oauth2/as/aus9czk5u7VwU4QnP5d7#scopes](https://dev-47078417-admin.okta.com/admin/oauth2/as/aus9czk5u7VwU4QnP5d7#scopes)] for scopes.
     
 - After that we need to create a class to add code in security filter chain so we’ll create a class `SecurityConfig` in package `com.api.gateaway.config`
-    - 
         
         ```java
         package com.spring.api.gateway.config;
@@ -2930,7 +2929,6 @@ First we need to add the `OKTA` ,`Spring security` dependencies in `pom.xml`
     Overall, this **`FeignClientInterceptor`** class provides a way to automatically apply OAuth2 access tokens to outgoing requests made by a Feign client, which helps to secure the communication between the client and the protected resource.
     
 - Now in order to get the `OAuth2AuthorizedClientManager` object in `FeignCLientInceptor`  and `@Autowired`  it we need to create and return its object from configuration file in `ConfigClass` in package `com.spring.micro.service.config`
-    - 
     
     ```java
     @Bean
