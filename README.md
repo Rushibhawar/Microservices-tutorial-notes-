@@ -2355,42 +2355,42 @@ First we need to add the `OKTA` ,`Spring security` dependencies in `pom.xml`
         }
         ```
         
-        This is a method in a Spring Boot application that defines a SecurityWebFilterChain for handling security-related tasks. The method takes an instance of ServerHttpSecurity as a parameter, which is used to configure the security for the application.
-        
-        In this particular implementation, the method authorizes all exchanges with any endpoint in the application to be authenticated. The method also configures the application to use OAuth2 for both the client and resource server. Additionally, it sets up the application to use JWT for token verification and authentication. Finally, the method returns the SecurityWebFilterChain that has been built with the provided configuration.
-        
-        <aside>
-        💡 The **`oauth2ResourceServer()`**
-         method is a part of Spring Security's OAuth2 Resource Server configuration. When called, it configures the application to act as an OAuth2 Resource Server, which means that it can receive and verify access tokens from an OAuth2 Authorization Server.
-        
-        When a client application needs to access a protected resource on a Resource Server, it sends an access token to the Resource Server. The Resource Server then validates the token to ensure that it is a legitimate token issued by a trusted Authorization Server, and that the token grants the necessary authorization to access the requested resource.
-        
-        In the context of Spring Security, the **`oauth2ResourceServer()`** method is used to configure the Resource Server to validate and process OAuth2 access tokens. This method allows you to configure the Resource Server to accept access tokens in various formats (such as JWT or opaque tokens), and to specify the details of how the tokens should be validated.
-        
-        By configuring the Resource Server using the **`oauth2ResourceServer()`** method, you can ensure that your application's protected resources are only accessible to clients that have valid and authorized access tokens.
-        
-        </aside>
-        
-        <aside>
-        💡 The **`oauth2Client()`** method is a part of Spring Security's OAuth2 Client configuration. When called, it configures the application to act as an OAuth2 Client, which means that it can initiate the OAuth2 authorization flow and obtain access tokens from an OAuth2 Authorization Server.
-        
-        In the context of this specific example, the **`oauth2Client()`** method might be used to configure the application to:
-        
-        - Define the client registration details, such as client ID and client secret, for communicating with the Authorization Server.
-        - Define the redirect URIs where the Authorization Server should redirect the user after successful authentication and authorization.
-        - Define the scopes that the application is requesting access to.
-        - Configure the OAuth2 login process, such as specifying the login page or customizing the login form.
-        
-        Once the **`oauth2Client()`** method is called, you can chain other methods to further configure the OAuth2 client behavior, such as **`authorizationCodeGrant()`** or **`clientCredentialsGrant()`**, depending on the type of OAuth2 flow that you need to implement.
-        
-        </aside>
-        
-        <aside>
-        💡 Since the APIGateway is responsible for handling the client-side OAuth2 authentication flow, you need to add the **`oauth2Client()`**
-         configuration in the **`SecurityWebFilterChain`**
-         of the APIGateway to ensure that the OAuth2 client is properly configured to interact with the OAuth2 server.
-        
-        </aside>
+	This is a method in a Spring Boot application that defines a SecurityWebFilterChain for handling security-related tasks. The method takes an instance of ServerHttpSecurity as a parameter, which is used to configure the security for the application.
+
+	In this particular implementation, the method authorizes all exchanges with any endpoint in the application to be authenticated. The method also configures the application to use OAuth2 for both the client and resource server. Additionally, it sets up the application to use JWT for token verification and authentication. Finally, the method returns the SecurityWebFilterChain that has been built with the provided configuration.
+
+	<aside>
+		💡 The **`oauth2ResourceServer()`**
+		 method is a part of Spring Security's OAuth2 Resource Server configuration. When called, it configures the application to act as an OAuth2 Resource Server, which means that it can receive and verify access tokens from an OAuth2 Authorization Server.
+
+	When a client application needs to access a protected resource on a Resource Server, it sends an access token to the Resource Server. The Resource Server then validates the token to ensure that it is a legitimate token issued by a trusted Authorization Server, and that the token grants the necessary authorization to access the requested resource.
+
+	In the context of Spring Security, the **`oauth2ResourceServer()`** method is used to configure the Resource Server to validate and process OAuth2 access tokens. This method allows you to configure the Resource Server to accept access tokens in various formats (such as JWT or opaque tokens), and to specify the details of how the tokens should be validated.
+
+	By configuring the Resource Server using the **`oauth2ResourceServer()`** method, you can ensure that your application's protected resources are only accessible to clients that have valid and authorized access tokens.
+
+	</aside>
+
+	<aside>
+		💡 The **` oauth2Client() `** method is a part of Spring Security's OAuth2 Client configuration. When called, it configures the application to act as an OAuth2 Client, which means that it can initiate the OAuth2 authorization flow and obtain access tokens from an OAuth2 Authorization Server.
+
+	In the context of this specific example, the **`oauth2Client()`** method might be used to configure the application to:
+
+	- Define the client registration details, such as client ID and client secret, for communicating with the Authorization Server.
+	- Define the redirect URIs where the Authorization Server should redirect the user after successful authentication and authorization.
+	- Define the scopes that the application is requesting access to.
+	- Configure the OAuth2 login process, such as specifying the login page or customizing the login form.
+
+		Once the **`oauth2Client()`** method is called, you can chain other methods to further configure the OAuth2 client behavior, such as **`authorizationCodeGrant()`** or **`clientCredentialsGrant()`**, depending on the type of OAuth2 flow that you need to implement.
+
+	</aside>
+
+	<aside>
+		💡 Since the APIGateway is responsible for handling the client-side OAuth2 authentication flow, you need to add the **`oauth2Client()`**
+		 configuration in the **`SecurityWebFilterChain`**
+		 of the APIGateway to ensure that the OAuth2 client is properly configured to interact with the OAuth2 server.
+
+	</aside>
         
 - Now we need to create a login controller in order to add login functionality
     - `AuthController`
