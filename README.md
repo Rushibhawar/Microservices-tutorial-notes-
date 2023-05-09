@@ -1,10 +1,5 @@
 # 🔥 Micro-services Tutorial using Spring Boot in One Video
 
-: April 24, 2023
-Github Repo: https://github.com/LearnCodeWithDurgesh/Microservices-Tutorial-Series
-Last edited time: May 9, 2023 12:47 PM
-Status: In progress
-YoutubeUrl: https://www.youtube.com/watch?v=ubHa5I3yP70
 
 # Micro-services
 
