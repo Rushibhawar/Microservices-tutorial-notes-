@@ -1,5 +1,7 @@
 # 🔥 Micro-services Tutorial using Spring Boot in One Video
 
+#### Refer below link for notes 
+https://rushikesh-bhawar.notion.site/Micro-services-Tutorial-using-Spring-Boot-in-One-Video-8fd3b97c33c24f918fb3c041329f2426
 
 # Micro-services
 
